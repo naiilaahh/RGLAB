@@ -33,7 +33,7 @@ def connect():
         print(f'❌ Error: {e}')
 
     finally:
-        if conn.is_connected():
+        if conn is not None and conn.is_connected():
             conn.close()
             print('🔴 Connection Closed')
 
